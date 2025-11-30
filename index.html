@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Biryani by Varsha</title>
+<style>
+body { font-family:'Arial',sans-serif; margin:0; padding:0; background:#fff3e0; }
+header { background:#ff5722; color:white; padding:25px; text-align:center; }
+header h1 { margin:0; font-size:2em; }
+header p { margin:5px 0 0 0; font-size:1em; }
+.menu { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px; padding:20px; }
+.item { background:#fff8e1; border-radius:10px; box-shadow:0 4px 6px rgba(0,0,0,0.1); text-align:center; padding:15px; transition: transform 0.3s; }
+.item:hover { transform:scale(1.05); }
+.item img { width:100%; border-radius:10px; height:150px; object-fit:cover; }
+.item select { margin-top:10px; padding:5px; width:80%; border-radius:5px; border:1px solid #ddd; }
+button { background:#ff5722; color:white; border:none; padding:10px; margin-top:10px; border-radius:5px; cursor:pointer; width:80%; font-size:16px; transition:0.3s; }
+button:hover { background:#e64a19; }
+#cart, #orderForm { max-width:600px; margin:20px auto; padding:20px; border-radius:10px; background:#fff8e1; border:2px solid #ff5722; }
+#cart h2, #orderForm h2 { margin-top:0; }
+#cart ul { list-style:none; padding-left:0; }
+input, textarea, select { width:100%; padding:8px; margin-top:10px; border-radius:5px; border:1px solid #ddd; }
+</style>
+</head>
+<body>
+
+<header>
+<h1>Biryani by Varsha</h1>
+<p>Contact: 8180093566 | Location: Majiwada, Thane</p>
+</header>
+
+<section class="menu">
+<div class="item">
+<img src="https://images.pexels.com/photos/7045696/pexels-photo-7045696.jpeg?auto=compress&cs=tinysrgb&h=350" alt="Chicken Biryani">
+<h3>Chicken Biryani</h3>
+<p>Price: ₹879 per kg</p>
+<select id="weight1">
+<option value="1">1 kg</option>
+<option value="2">2 kg</option>
+<option value="3">3 kg</option>
+</select>
+<button onclick="addToCart('Chicken Biryani',879,'weight1')">Add to Cart</button>
+</div>
+
+<div class="item">
+<img src="https://images.pexels.com/photos/2097090/pexels-photo-2097090.jpeg?auto=compress&cs=tinysrgb&h=350" alt="Mutton Biryani">
+<h3>Mutton Biryani</h3>
+<p>Price: ₹1499 per kg</p>
+<select id="weight2">
+<option value="1">1 kg</option>
+<option value="2">2 kg</option>
+<option value="3">3 kg</option>
+</select>
+<button onclick="addToCart('Mutton Biryani',1499,'weight2')">Add to Cart</button>
+</div>
+
+<div class="item">
+<img src="https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg?auto=compress&cs=tinysrgb&h=350" alt="Veg Biryani">
+<h3>Veg Biryani</h3>
+<p>Price: ₹699 per kg</p>
+<select id="weight3">
+<option value="1">1 kg</option>
+<option value="2">2 kg</option>
+<option value="3">3 kg</option>
+</select>
+<button onclick="addToCart('Veg Biryani',699,'weight3')">Add to Cart</button>
+</div>
+
+<div class="item">
+<img src="https://images.pexels.com/photos/1111311/pexels-photo-1111311.jpeg?auto=compress&cs=tinysrgb&h=350" alt="Paneer Biryani">
+<h3>Paneer Biryani</h3>
+<p>Price: ₹849 per kg</p>
+<select id="weight4">
+<option value="1">1 kg</option>
+<option value="2">2 kg</option>
+<option value="3">3 kg</option>
+</select>
+<button onclick="addToCart('Paneer Biryani',849,'weight4')">Add to Cart</button>
+</div>
+</section>
+
+<div id="cart">
+<h2>Cart</h2>
+<ul id="cartItems"></ul>
+<h3>Total: ₹<span id="total">0</span></h3>
+</div>
+
+<div id="orderForm">
+<h2>Place Your Order</h2>
+<form onsubmit="submitOrderWhatsApp(event)">
+<input type="text" id="name" placeholder="Your Name" required>
+<input type="text" id="phone" placeholder="Phone Number" value="8180093566" readonly>
+<textarea id="address" placeholder="Delivery Address (Majiwada, Thane)" rows="3" required></textarea>
+<select id="payment" required>
+<option value="">Select Payment Method</option>
+<option value="Cash on Delivery">Cash on Delivery</option>
+<option value="UPI">UPI</option>
+<option value="Card">Card</option>
+</select>
+<button type="submit">Order via WhatsApp</button>
+</form>
+</div>
+
+<script>
+let cart=[]; let total=0;
+function addToCart(name,price,weightId){
+const weight=document.getElementById(weightId).value;
+const<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Biryani by Varsha</title>
+<style>
+body { font-family:'Arial',sans-serif; margin:0; padding:0; background:#fff3e0; }
+header { background:#ff5722; color:white; padding:25px; text-align:center; }
+header h1 { margin:0; font-size:2em; }
+header p { margin:5px 0 0 0; font-size:1em; }
+.menu { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px; padding:20px; }
+.item { background:#fff8e1; border-radius:10px; box-shadow:0 4px 6px rgba(0,0,0,0.1); text-align:center; padding:15px; transition: transform 0.3s; }
+.item:hover { transform:scale(1.05); }
+.item img { width:100%; border-radius:10px; height:150px; object-fit:cover; }
+.item select { margin-top:10px; padding:5px; width:80%; border-radius:5px; border:1px solid #ddd; }
+button { background:#ff5722; color:white; border:none; padding:10px; margin-top:10px; border-radius:5px; cursor:pointer; width:80%; font-size:16px; transition:0.3s; }
+button:hover { background:#e64a19; }
+#cart, #orderForm { max-width:600px; margin:20px auto; padding:20px; border-radius:10px; background:#fff8e1; border:2px solid #ff5722; }
+#cart h2, #orderForm h2 { margin-top:0; }
+#cart ul { list-style:none; padding-left:0; }
+input, textarea, select { width:100%; padding:8px; margin-top:10px; border-radius:5px; border:1px solid #ddd; }
+</style>
+</head>
+<body>
+
+<header>
+<h1>Biryani by Varsha</h1>
+<p>Contact: 8180093566 | Location: Majiwada, Thane</p>
+</header>
+
+<section class="menu">
+<div class="item">
+<img src="https://images.pexels.com/photos/7045696/pexels-photo-7045696.jpeg?auto=compress&cs=tinysrgb&h=350" alt="Chicken Biryani">
+<h3>Chicken Biryani</h3>
+<p>Price: ₹879 per kg</p>
+<select id="weight1">
+<option value="1">1 kg</option>
+<option value="2">2 kg</option>
+<option value="3">3 kg</option>
+</select>
+<button onclick="addToCart('Chicken Biryani',879,'weight1')">Add to Cart</button>
+</div>
+
+<div class="item">
+<img src="https://images.pexels.com/photos/2097090/pexels-photo-2097090.jpeg?auto=compress&cs=tinysrgb&h=350" alt="Mutton Biryani">
+<h3>Mutton Biryani</h3>
+<p>Price: ₹1499 per kg</p>
+<select id="weight2">
+<option value="1">1 kg</option>
+<option value="2">2 kg</option>
+<option value="3">3 kg</option>
+</select>
+<button onclick="addToCart('Mutton Biryani',1499,'weight2')">Add to Cart</button>
+</div>
+
+<div class="item">
+<img src="https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg?auto=compress&cs=tinysrgb&h=350" alt="Veg Biryani">
+<h3>Veg Biryani</h3>
+<p>Price: ₹699 per kg</p>
+<select id="weight3">
+<option value="1">1 kg</option>
+<option value="2">2 kg</option>
+<option value="3">3 kg</option>
+</select>
+<button onclick="addToCart('Veg Biryani',699,'weight3')">Add to Cart</button>
+</div>
+
+<div class="item">
+<img src="https://images.pexels.com/photos/1111311/pexels-photo-1111311.jpeg?auto=compress&cs=tinysrgb&h=350" alt="Paneer Biryani">
+<h3>Paneer Biryani</h3>
+<p>Price: ₹849 per kg</p>
+<select id="weight4">
+<option value="1">1 kg</option>
+<option value="2">2 kg</option>
+<option value="3">3 kg</option>
+</select>
+<button onclick="addToCart('Paneer Biryani',849,'weight4')">Add to Cart</button>
+</div>
+</section>
+
+<div id="cart">
+<h2>Cart</h2>
+<ul id="cartItems"></ul>
+<h3>Total: ₹<span id="total">0</span></h3>
+</div>
+
+<div id="orderForm">
+<h2>Place Your Order</h2>
+<form onsubmit="submitOrderWhatsApp(event)">
+<input type="text" id="name" placeholder="Your Name" required>
+<input type="text" id="phone" placeholder="Phone Number" value="8180093566" readonly>
+<textarea id="address" placeholder="Delivery Address (Majiwada, Thane)" rows="3" required></textarea>
+<select id="payment" required>
+<option value="">Select Payment Method</option>
+<option value="Cash on Delivery">Cash on Delivery</option>
+<option value="UPI">UPI</option>
+<option value="Card">Card</option>
+</select>
+<button type="submit">Order via WhatsApp</button>
+</form>
+</div>
+
+<script>
+let cart=[]; let total=0;
+function addToCart(name,price,weightId){
+const weight=document.getElementById(weightId).value;
+const
